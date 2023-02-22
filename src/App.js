@@ -1,12 +1,14 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { RouterProvider } from "react-router-dom";
-import "./App.css";
 import { router } from "./routes/routes";
+import { theme } from "./themes/Theme";
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
       <RouterProvider router={router}></RouterProvider>
-    </div>
+      <CssBaseline />
+    </ThemeProvider>
   );
 }
 
